@@ -29,6 +29,11 @@ seqLen=floor(length(S_Full)/nSeg);
 EMSteps=1;
 noise_strength=sigma;
 defaultSigma=noise_strength/(x(2)-x(1));
+%intermediate parameter
+% pi_up: the nominator for estimating pi
+% A_up: the nominator for estimating A (the jump probability matrix)
+% mu_up: the nominator for estimating mu
+% mu_down: the denominator for estimating mu
 
 for iter=1:EMSteps
     disp(iter)
